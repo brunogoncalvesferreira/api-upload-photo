@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "tsx watch src/http/server.ts",
-    "dev:build": "tsup ./src/http/server.ts --out-dir ./dist --format cjs,esm",
+    "dev:build": "tsup ./src/http/server.ts --out-dir ./dist --format cjs,esm && mkdir -p ./dist/prisma && cp ./prisma/dev.db ./dist/prisma/dev.db",
     "start": "node --experimental-specifier-resolution=node ./dist/server.js"
   },
   "keywords": [],
