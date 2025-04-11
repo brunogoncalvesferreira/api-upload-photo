@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "tsx watch src/http/server.ts",
-    "dev:build": "tsup ./src/http/server.ts --out-dir ./dist --format cjs,esm && mkdir -p ./dist/prisma && cp ./prisma/dev.db ./dist/prisma/dev.db",
+    "dev:build": "tsup ./src/http/server.ts --out-dir ./dist --format cjs,esm && cp .env ./dist/",
     "start": "node --experimental-specifier-resolution=node ./dist/server.js"
   },
   "keywords": [],
@@ -13,6 +13,7 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@biomejs/biome": "1.9.4",
     "@types/multer": "^1.4.12",
     "@types/node": "^22.10.5",
     "prisma": "^6.2.1",

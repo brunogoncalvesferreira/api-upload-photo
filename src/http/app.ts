@@ -6,9 +6,7 @@ import fastifyStatic from '@fastify/static'
 import { upload } from './routes/upload'
 import path from 'node:path'
 
-export const app = fastify({
-  logger: true
-})
+export const app = fastify()
 
 const uploadsPath = path.join(process.cwd(), 'uploads')
 
